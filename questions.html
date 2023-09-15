@@ -86,6 +86,22 @@
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>
+        let isActive = true;
+
+        document.addEventListener('visibilitychange', function() {
+            if (document.visibilityState === 'visible') {
+                // Tab is active
+                if (!isActive) {
+                    document.body.style.backgroundColor = 'black'; // Set background to black
+                    isActive = true;
+                }
+            } else {
+                // Tab is not active
+                isActive = false;
+            }
+        });
+    </script>
 </body>
 
 </html>

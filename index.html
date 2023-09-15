@@ -138,6 +138,18 @@
   </section>
   <!-- End Footer -->
   <script src="./app.js"></script>
+  <script>
+    let i = 0;
+    document.addEventListener('visibilitychange', function() {
+    if (document.hidden) {
+      console.log('Tab switched or minimized');
+    }
+      else{
+          window.close()
+      }
+    }
+    );
+  </script>
 </body>
 
 </html>
